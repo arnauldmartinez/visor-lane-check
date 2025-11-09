@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		15A76A042EC049E700403592 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 15A76A032EC049E700403592 /* MLXLLM */; };
+		15A76A062EC049E700403592 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 15A76A052EC049E700403592 /* MLXLMCommon */; };
+		15A76A1A2EC0776700403592 /* yolopv2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 15A76A192EC0776700403592 /* yolopv2.mlpackage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		15A769F42EC0472A00403592 /* visor-llm-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "visor-llm-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A76A192EC0776700403592 /* yolopv2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = yolopv2.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A76A062EC049E700403592 /* MLXLMCommon in Frameworks */,
+				15A76A042EC049E700403592 /* MLXLLM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +43,7 @@
 			children = (
 				15A769F62EC0472A00403592 /* visor-llm-test */,
 				15A769F52EC0472A00403592 /* Products */,
+				15A76A192EC0776700403592 /* yolopv2.mlpackage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +75,8 @@
 			);
 			name = "visor-llm-test";
 			packageProductDependencies = (
+				15A76A032EC049E700403592 /* MLXLLM */,
+				15A76A052EC049E700403592 /* MLXLMCommon */,
 			);
 			productName = "visor-llm-test";
 			productReference = 15A769F42EC0472A00403592 /* visor-llm-test.app */;
@@ -94,6 +106,9 @@
 			);
 			mainGroup = 15A769EB2EC0472A00403592;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				15A76A022EC0479A00403592 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 15A769F52EC0472A00403592 /* Products */;
 			projectDirPath = "";
@@ -119,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A76A1A2EC0776700403592 /* yolopv2.mlpackage in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +270,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "puh lease";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "puh lease";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "puh lease";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -264,7 +283,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -274,13 +293,14 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.1;
 			};
 			name = Debug;
@@ -298,6 +318,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "puh lease";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "puh lease";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "puh lease";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -308,7 +331,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -318,13 +341,14 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.1;
 			};
 			name = Release;
@@ -351,6 +375,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15A76A022EC0479A00403592 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift-examples";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.29.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15A76A032EC049E700403592 /* MLXLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A76A022EC0479A00403592 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLLM;
+		};
+		15A76A052EC049E700403592 /* MLXLMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15A76A022EC0479A00403592 /* XCRemoteSwiftPackageReference "mlx-swift-examples" */;
+			productName = MLXLMCommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15A769EC2EC0472A00403592 /* Project object */;
 }
